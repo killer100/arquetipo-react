@@ -1,7 +1,8 @@
 import React from 'react';
 import Provider from 'react-redux/es/components/Provider';
-import { renderRoutes } from 'react-router-config';
 import { Router } from 'react-router-dom';
+
+import Layout from '@core/components/layout';
 
 import AppContext from './AppContext';
 import history from './config/history';
@@ -19,11 +20,7 @@ function App() {
     >
       <Provider store={store}>
         <Router history={history}>
-          <div className="App">
-            <React.Suspense fallback={<div>Loading... </div>}>
-              {renderRoutes(routes)}
-            </React.Suspense>
-          </div>
+          <Layout />
         </Router>
       </Provider>
     </AppContext.Provider>

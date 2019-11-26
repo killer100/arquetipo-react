@@ -1,18 +1,12 @@
 import {
 	combineReducers
 } from 'redux';
+import app from './app';
 
 const createReducer = (asyncReducers) =>
 	combineReducers({
 		...asyncReducers,
-		red: (state = {}, action) => {
-			switch (action.type) {
-				case '':
-					return state;
-				default:
-					return state;
-			}
-		}
+		app
 	});
 
 export default createReducer;
